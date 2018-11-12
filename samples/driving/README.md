@@ -7,7 +7,7 @@ Below are two examples of cars and trucks detected in teh image
 ![Car Segmentation](https://github.com/ReemHal/Mask_RCNN_Nucli/blob/master/samples/driving/figures/car_detection.png)
 
 ## Installation
-From the [Releases page](https://github.com/matterport/Mask_RCNN/releases) page:
+[You can find the Mask-RCNN code and baloon example here: (https://github.com/matterport/Mask_RCNN/releases)]
 1. Download `mask_rcnn_balloon.h5`. Save it in the root directory of the repo (the `mask_rcnn` directory).
 2. Download Kaggle's CVPR 1018 WAD dataset (https://www.kaggle.com/c/cvpr-2018-autonomous-driving). Expand it such that it's in the path `mask_rcnn/datasets/driving/`.
 
