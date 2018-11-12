@@ -6,6 +6,7 @@ This is an example that uses Mask-RCNN to identify cell nucli from Kaggle's Data
 
 ![Nucli Bounding Box](https://github.com/ReemHal/Mask_RCNN_Private/blob/master/samples/nucli/figures/Bounding_Box_nucli.png)
 
+Update: Please note this is not the same as the recently uploaded Nucleus example by Waleedka.
 
 ## Installation
 
