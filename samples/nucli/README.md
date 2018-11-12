@@ -1,48 +1,41 @@
-# Color Spash Example
+# Detect Nucli Example
 
-This is an example showing the use of Mask RCNN in a real application.
-We train the model to detect balloons only, and then we use the generated 
-masks to keep balloons in color while changing the rest of the image to
-grayscale. 
+This is an example that uses Mask-RCNN to identify cell nucli from Kaggle's Data Science Bowl 2018 (https://www.kaggle.com/c/data-science-bowl-2018). The example follows the Balloons example by Waleedka (https://github.com/waleedka) but on images only. Below are examples of the nucli highlighted with a color splash and identified with a bounding box.
+
+![Nucli shown with color splash](https://github.com/ReemHal/Mask_RCNN_Private/blob/master/samples/nucli/figures/color_splash_nucli.png)
+
+![Nucli Bounding Box](https://github.com/ReemHal/Mask_RCNN_Private/blob/master/samples/nucli/figures/Bounding_Box_nucli.png)
+
 
 ## Installation
-From the [Releases page](https://github.com/matterport/Mask_RCNN/releases) page:
-1. Download `mask_rcnn_balloon.h5`. Save it in the root directory of the repo (the `mask_rcnn` directory).
-2. Download `balloon_dataset.p3`. Expand it such that it's in the path `mask_rcnn/datasets/balloon/`.
+
+1. Download `mask_rcnn_balloon.h5` ((https://github.com/matterport/Mask_RCNN/releases). Save it in the root directory of the repo (the `mask_rcnn` directory).
+2. Download Kaggle's nucli dataset from https://www.kaggle.com/c/data-science-bowl-2018/data. Expand it such that it's in the path `mask_rcnn/datasets/nucli/`.
 
 ## Apply color splash using the provided weights
+
 Apply splash effect on an image:
 
 ```bash
-python3 balloon.py splash --weights=/path/to/mask_rcnn/mask_rcnn_balloon.h5 --image=<file name or URL>
+python3 nucli.py splash --weights=/path/to/mask_rcnn/mask_rcnn_balloon.h5 --image=<file name or URL>
 ```
-
-Apply splash effect on a video. Requires OpenCV 3.2+:
-
-```bash
-python3 balloon.py splash --weights=/path/to/mask_rcnn/mask_rcnn_balloon.h5 --video=<file name or URL>
-```
-
 
 ## Run Jupyter notebooks
-Open the `inspect_balloon_data.ipynb` or `inspect_balloon_model.ipynb` Jupter notebooks. You can use these notebooks to explore the dataset and run through the detection pipelie step by step.
+Open the `inspect_nucli_data.ipynb` or `inspect_nucli_model.ipynb` Jupter notebooks. You can use these notebooks to explore the dataset and run through the detection pipelie step by step.
 
 ## Train the Balloon model
 
 Train a new model starting from pre-trained COCO weights
 ```
-python3 balloon.py train --dataset=/path/to/balloon/dataset --weights=coco
+python3 nucli.py train --dataset=/path/to/nucli/dataset --weights=coco
 ```
 
 Resume training a model that you had trained earlier
 ```
-python3 balloon.py train --dataset=/path/to/balloon/dataset --weights=last
+python3 nucli.py train --dataset=/path/to/nucli/dataset --weights=last
 ```
 
 Train a new model starting from ImageNet weights
 ```
-python3 balloon.py train --dataset=/path/to/balloon/dataset --weights=imagenet
+python3 nucli.py train --dataset=/path/to/nucli/dataset --weights=imagenet
 ```
-
-The code in `balloon.py` is set to train for 3K steps (30 epochs of 100 steps each), and using a batch size of 2. 
-Update the schedule to fit your needs.
