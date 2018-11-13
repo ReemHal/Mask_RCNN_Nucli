@@ -1,10 +1,10 @@
 # Detect Nucli Example
 
-This is an example that uses Mask-RCNN to identify cell nucli from Kaggle's Data Science Bowl 2018 (https://www.kaggle.com/c/data-science-bowl-2018). The example follows the Balloons example by Waleedka (https://github.com/waleedka) but on images only. Below are examples of the nucli highlighted with a color splash and identified with a bounding box.
+This is an example that uses Mask-RCNN to identify cell nucli from Kaggle's Data Science Bowl 2018 (https://www.kaggle.com/c/data-science-bowl-2018). The example follows the Balloons example by Waleedka (https://github.com/waleedka) but on images only. Below are examples of the nuclei highlighted with a color splash and identified with a bounding box.
 
-![Nucli shown with color splash](https://github.com/ReemHal/Mask_RCNN_Private/blob/master/samples/nucli/figures/color_splash_nucli.png)
+![Nuclei shown with color splash](https://github.com/ReemHal/Mask_RCNN_Private/blob/master/samples/nucli/figures/color_splash_nuclei.png)
 
-![Nucli Bounding Box](https://github.com/ReemHal/Mask_RCNN_Private/blob/master/samples/nucli/figures/Bounding_Box_nucli.png)
+![Nuclei Bounding Box](https://github.com/ReemHal/Mask_RCNN_Private/blob/master/samples/nucli/figures/Bounding_Box_nuclei.png)
 
 Update: Please note this is not the same as the recently uploaded Nucleus example by Waleedka.
 
